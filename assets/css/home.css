@@ -1,0 +1,80 @@
+body{
+    margin: 0px;
+    /* text-align: center; */
+    font-family: sans-serif;
+}
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+/* .contact{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; 
+    align-items: center;
+}*/
+/*.div-inner{
+    background-color: hotpink;
+    height: 50px;
+    width: 500px;
+    color: lawngreen;
+}
+*/
+#Contacts-list-Container {
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Contacts-list-Container ul{
+    padding: 0;
+    list-style: none;
+    
+    
+}
+.contact{
+    width: auto;
+    min-width: 500px;
+    padding: 3px 10px;
+    border:1px solid whitesmoke;
+    /* background-color: #6f92f9; */
+    background-color: seagreen;
+    color: yellow;
+    /* color: ; */
+    /* font-weight: 500; */
+    display: flex;
+    box-shadow: 1px 1px 1px 1px lightyellow;
+}
+.contact .details{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+.details p{
+    /* font-size: large; */
+    font-family: cursive;
+}
+.contact .delete-button{
+    width:10%;
+    text-align: center;
+    margin-top:20px;
+
+}
+.contact .delete-button a{
+    color: white;
+    background-color: crimson;
+}
+#new-contact-form{
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-top:40;
+    text-align: center;
+}
+#color{
+    background-color: darkmagenta;
+    color: aqua;
+}

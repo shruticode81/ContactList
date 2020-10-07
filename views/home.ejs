@@ -1,0 +1,52 @@
+<html>
+    <head>
+      <title>
+          <%= title%>
+      </title>  
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id= "page-heading">
+            <i class="fas fa-address-book"></i>
+           contact list
+        </h1>
+        <div id="Contacts-list-Container">
+            <ul>
+                <% for(let i of contact_list) {%>
+
+                    <li class="contact">
+                        <div class="details">
+                            <p><%= i.name%></p>
+                            <p><%= i.phone %></p>
+                        </div>
+                        <div class="delete-button">
+                            <a href="/delete-contact/?id=<%=i._id%>">
+                            <i class="fas fa-window-close"></i>
+                            </a>
+                        </div>
+                        
+                    </li>
+                <% }%>
+            </ul>
+            <!-- <% for(let i of contact_list) {%>
+                <div class="div-inner"><%= i.name%> <%= i.phone%></div>
+                <br>
+
+            <%}%> -->
+        
+        </div>
+        <form id="new-contact-form" action="/create-contact" method="post">
+            <input type="text" name="name" placeholder="enter name" required> <br>
+            <input type="text" name="phone" placeholder="enter phone no." required><br>
+            <button id="color" type="submit">Add Contact</button>
+        </form>
+
+        <!-- <form action="/delete-contact" method="post">
+            <input type="text" name="name" placeholder="enter name to be deleted" required >
+            <input type="number" name="phone" placeholder="enter phone" required> 
+           <button type="submit">delete</button>
+        </form> -->
+       <script type="text/javascript" src="/js/home.js"></script> 
+    </body>
+</html>
